@@ -149,6 +149,25 @@ Website builder, Content calendar, Export bundles, real-time multi-user collabor
 Leave clean seams so these slot in later (especially Research, which will spawn multiple
 isolated engine calls in parallel and must be gated behind explicit user approval for cost).
 
+### Later idea — a richer onboarding (not v1)
+
+v1's first-run flow is just lightweight context-gathering. A future version should
+grow a proper **onboarding** that *configures the experience*, not only learns about
+the project. Among the things it should let the user decide:
+
+- **How the cofounder speaks to them** — tone and challenge level (e.g. warm-but-honest
+  vs. sharper/more contrarian vs. gentler/supportive), verbosity, how directly it pushes
+  back. Persist this as a user preference that feeds into the cofounder system prompt.
+- **Canvas-write behaviour** — auto-write-then-tell vs. ask-before-each-write.
+- **...and many other things** — likely: the user's role/experience and domain, working
+  style and cadence, goals and constraints/non-goals, risk appetite, how often Ultraplan
+  should re-plan, naming/format preferences for the canvas, and which optional (gated)
+  features are enabled. Treat this as an extensible preferences layer surfaced through a
+  guided first-run, stored in workspace config/state, and injected into prompt assembly.
+
+Design v1 with a clean seam for this: keep persona/tone and write-behaviour as inputs to
+prompt assembly (not hard-coded), so onboarding can later set them without a rewrite.
+
 ---
 
 ## Conventions

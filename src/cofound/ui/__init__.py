@@ -1,1 +1,5 @@
-"""The Textual TUI. (Implemented in STEP 4.)"""
+"""The Textual TUI."""
+
+from .app import CofoundApp
+
+__all__ = ["CofoundApp"]

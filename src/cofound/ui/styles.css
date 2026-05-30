@@ -1,1 +1,89 @@
-/* Textual CSS for the Cofound TUI. Populated in STEP 4. */
+/* Cofound TUI styles. */
+
+Screen {
+    background: $background;
+}
+
+#main {
+    height: 1fr;
+}
+
+/* ---- Chat pane (left) ---- */
+
+#chat {
+    width: 2fr;
+    border-right: solid $primary-darken-2;
+}
+
+#chat-log {
+    height: 1fr;
+    padding: 1 2;
+    scrollbar-size-vertical: 1;
+}
+
+#chat-input {
+    dock: bottom;
+    margin: 0 1 1 1;
+    border: round $primary;
+}
+
+#chat-input:focus {
+    border: round $accent;
+}
+
+/* Message bubbles */
+ChatMessage {
+    margin: 0 0 1 0;
+    padding: 0 1;
+    width: 100%;
+}
+
+ChatMessage.role-you {
+    color: $text;
+    border-left: thick $accent;
+    padding-left: 2;
+}
+
+ChatMessage.role-cofounder {
+    color: $text;
+    border-left: thick $success;
+    padding-left: 2;
+}
+
+ChatMessage.role-system {
+    color: $text-muted;
+    border-left: thick $primary-darken-2;
+    padding-left: 2;
+}
+
+ChatMessage.role-error {
+    color: $error;
+    border-left: thick $error;
+    padding-left: 2;
+}
+
+/* ---- Canvas pane (right) ---- */
+
+CanvasPane {
+    width: 3fr;
+}
+
+#canvas-title {
+    height: 1;
+    padding: 0 1;
+    background: $panel;
+    color: $text;
+}
+
+#canvas-tree {
+    height: 40%;
+    border-bottom: solid $primary-darken-2;
+    padding: 0 1;
+    scrollbar-size-vertical: 1;
+}
+
+#canvas-view {
+    height: 1fr;
+    padding: 0 2;
+    scrollbar-size-vertical: 1;
+}
