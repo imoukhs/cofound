@@ -10,7 +10,19 @@ readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "Cofound" }]
-keywords = ["ai", "cofounder", "tui", "textual", "agent"]
+keywords = ["ai", "cofounder", "tui", "textual", "agent", "claude"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+    "Topic :: Terminals",
+]
 
 dependencies = [
     # The single SDK dependency. Only `engine/` imports it.
@@ -26,6 +38,11 @@ dev = [
     "pytest>=8.0",
     "pytest-asyncio>=0.23",
 ]
+
+[project.urls]
+Homepage = "https://github.com/imoukhs/cofound"
+Repository = "https://github.com/imoukhs/cofound"
+Issues = "https://github.com/imoukhs/cofound/issues"
 
 [project.scripts]
 cofound = "cofound.cli:main"
